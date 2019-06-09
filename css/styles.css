@@ -1,0 +1,56 @@
+
+
+body { 
+    background-image: url("C:/Users/Joao Paulo/Desktop/starwar-JSPURO/img/star.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+  } 
+
+.app {
+    height: 900px;   
+    border-radius: 20px;    
+}
+
+.app strong {
+   color: orange;   
+}
+
+.app small {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+ }
+
+.Search-cont {
+    text-align: center;
+    font-size: 22px;
+}
+
+.app-cont {  
+    height: 500px;   
+    border: 2px solid orange;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.801);
+}
+
+.app-cont p {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif 
+  }
+
+.app-cont h1 {
+    color: #ddd;
+}
+
+@media screen and (max-width: 548px) {
+
+    .app-cont p {
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif 
+      }
+      
+}
+
+ 
