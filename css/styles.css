@@ -1,14 +1,12 @@
 
-
 body { 
-    background-image: url("C:/Users/Joao Paulo/Desktop/starwar-JSPURO/img/star.jpg");
+    background-image: url("C:/Users/Joao Paulo/Desktop/Function Async/img/star.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 900px;
-  } 
+   } 
 
 .app {
-    height: 900px;   
+    
     border-radius: 20px;    
 }
 
@@ -24,13 +22,17 @@ body {
 .Search-cont {
     text-align: center;
     font-size: 22px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.801);
 }
 
 .app-cont {  
-    height: 500px;   
+   height: 300px;
     border: 2px solid orange;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.801);
+    text-align: center;
+    width: 700px;
 }
 
 .app-cont p {
@@ -39,9 +41,22 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif 
   }
 
-.app-cont h1 {
-    color: #ddd;
+
+.PlanetList {
+    text-align: center;
+    list-style: none;
+    color: rgb(233, 175, 68);
+    background-color: rgba(0, 0, 0, 0.801);
+    border: 2px solid orange;
 }
+
+.small-text {
+    
+    border-radius: 20px;
+    color: orange;
+}
+
+
 
 @media screen and (max-width: 548px) {
 
@@ -52,5 +67,3 @@ body {
       }
 
 }
-
- 

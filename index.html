@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
 
-  <title> StarWars Planet's </title>
+  <title> StarWars Search </title>
 </link>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -41,38 +41,50 @@
 
     <body class="">
 
-    <article>
+  <article>
+    <div class="app mt-5 w-75 mx-auto text-light">
+      <strong  class="Search-cont mx-auto d-block mt-5 mb-3"> 
+        Olá! Ache algum Planeta do mundo de Star Wars!
+      </strong>
 
-      <div class="app mt-5 w-75 mx-auto text-light">
-        <strong id="pesquisa" class="Search-cont mx-auto d-block mt-5 mb-3"> 
-          Olá! Ache algum Planeta do mundo de Star Wars!
-        </strong>
+      <div class="PlanetList text-warning">
+        <small>          
+            <li>Alderaan</li>
+            <li>Yavin IV</li>
+            <li>Hoth</li>
+            <li>Dagobah</li>
+            <li>Bespin</li>
+            <li>Endor</li>
+            <li>Naboo</li>
+            <li>Coruscant</li>
+            <li>Kamino</li>
+            <li>Geonosis</li>
+            <small class=" small-text mx-auto d-block text-center mb-2 mt-3">
+              Você receberá o clima, o terreno do planeta e a população total!
+        </small>
+      </div>  
 
-        <small class="mx-auto d-block text-center mb-2">
-           Você receberá o clima, o terreno do planeta, população total e o filme em que o planeta apareceu.
-          </small>
+        <input id="procurar" class="ml-5 mt-5 form-group mx-auto d-block" type="text" name="user" placeholder="Planeta AQUI!">
+        <button type="submit" class="ml-5 mt-5 mx-auto d-block btn btn-warning" onclick="Pesqz()"> Procurar </button> 
 
-         
-        
-          <div class="container-fluid app-cont w-75 mt-5 mx-auto">
+    <div class="app-cont mx-auto d-block mt-5 mb-5">
+      <p id="name" class="mt-4 ml-4"> </p>
+      <p id="population" class="ml-4"> </p>
+      <p id="climate" class="mt-4 ml-4"> </p>
+      <p id="terrain" class="ml-4"> </p>
+      <p id="films" class="mt-4 ml-4"> </p>
+    </div>
 
-              <p id="Name" class="mt-4 ml-4"> </p>
-              <p id="Population" class="ml-4"> </p>
-              <p id="Climate" class="ml-4"> </p>
-              <p id="Terrain" class="ml-4"> </p>
-              <p id="filmes" class="ml-4"> </p>
+  </div> 
 
-                      
+</article>
 
-          </div>          
-          <button id="botao" class="btn-lg btn-warning mx-auto d-block mt-5"> Achando Planeta! </button>
-      </div>
-
-    </article>
-            
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>    
     <script src="js/scripts.js"></script>
 
   </body>  
  </html>
+
+
+
+ 

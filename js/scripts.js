@@ -1,44 +1,156 @@
 
 
-            // id's html;
-        let button = document.querySelector('#botao');
-        let name = document.querySelector('#Name');
-        let population = document.querySelector('#Population');
-        let climate = document.querySelector('#Climate');
-        let terrain = document.querySelector('#Terrain');
-        let films = document.querySelector('#filmes');
 
+    //     // REQUEST COM AJAX - JS PURO.
+    // PROMISE - PARAMETROS;
 
-        // aleatoriedade e getApi Func;
-    async function getPlanet() {
-        let Random = Math.floor(( Math.random() * 10 ) + 1 )
-        let api = 'https://swapi.co/api/planets/' + Random
+    function Pesqz () {
+    var MyPromise = function () {
+        return new Promise(function (resolve,reject){
 
-        // integrando API para retornar planetas e filmes;
-        let planet = await axios.get(api)
-        let films = await Promise.all (
-            planet.data.films.map(axios.get)
-        )
-            // arrays de planetas e filmes;
-        let planetData = planet.data
-        let filmsData = films.map(film => film.data)
+            // Rquesição;
+            xhr = new XMLHttpRequest();
 
-        updateInfo(planetData, filmsData)     
-}
-        // Adicionando retorno da api ao html;
-    function updateInfo(planetData, filmsData) {   
+            // Consumindo API;
+            xhr.open('GET', 'https://swapi.co/api/planets/');
+            xhr.send(null);
+
+            // Status do retorno da api;
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200) {
+                        // Passando string para javascript Object;
+                        resolve (JSON.parse(xhr.responseText));
+                    } else {
+                        reject('Error request;') }}}} );
+    } 
+
+    // Chamando Promise;
+        MyPromise()
+            // Resposta da api;
+            .then(function (response) {
+                console.log(response.results);
+                // console.log(response.results[0]['name']);
+                // console.log(response.results.films);   
+
+                searchz = document.getElementById("procurar").value;   
+                
+                if( searchz == '') {
+                   alert('Digite o nome do planeta');
+                }
+
+                if( searchz == null ) {
+                    alert('Digite um planeta válido.')
+                }
+
+                if( searchz.length <= 1) {
+                    alert('Digite o nome completo do Planeta!');
+                 }
+                
+                if( searchz == response.results[0]['name']) {
+                    document.getElementById("name").innerHTML ='Planeta: ' + response.results[0]['name'];
+                    document.getElementById("population").innerHTML ='População: ' +  response.results[0]['population'];
+                    document.getElementById("climate").innerHTML = 'Clima: ' + response.results[0]['climate'];
+                    document.getElementById("terrain").innerHTML = 'Terreno: ' + response.results[0]['terrain'];
+                }
+
+                if( searchz == response.results[1]['name']) {
+                    document.getElementById("name").innerHTML ='Planeta: ' + response.results[1]['name'];
+                    document.getElementById("population").innerHTML ='População: ' +  response.results[1]['population'];
+                    document.getElementById("climate").innerHTML = 'Clima: ' + response.results[1]['climate'];
+                    document.getElementById("terrain").innerHTML = 'Terreno: ' + response.results[1]['terrain'];
+                }
+
+                if( searchz == response.results[2]['name']) {
+                    document.getElementById("name").innerHTML ='Planeta: ' + response.results[2]['name'];
+                    document.getElementById("population").innerHTML ='População: ' +  response.results[2]['population'];
+                    document.getElementById("climate").innerHTML = 'Clima: ' + response.results[2]['climate'];
+                    document.getElementById("terrain").innerHTML = 'Terreno: ' + response.results[2]['terrain'];
+                }
+
+                if( searchz == response.results[3]['name']) {
+                    document.getElementById("name").innerHTML ='Planeta: ' + response.results[3]['name'];
+                    document.getElementById("population").innerHTML ='População: ' +  response.results[3]['population'];
+                    document.getElementById("climate").innerHTML = 'Clima: ' + response.results[3]['climate'];
+                    document.getElementById("terrain").innerHTML = 'Terreno: ' + response.results[3]['terrain'];
+                }
+
+                if( searchz == response.results[4]['name']) {
+                    document.getElementById("name").innerHTML ='Planeta: ' + response.results[4]['name'];
+                    document.getElementById("population").innerHTML ='População: ' +  response.results[4]['population'];
+                    document.getElementById("climate").innerHTML = 'Clima: ' + response.results[4]['climate'];
+                    document.getElementById("terrain").innerHTML = 'Terreno: ' + response.results[4]['terrain'];
+                    
+                }
+
+                if( searchz == response.results[5]['name']) {
+                    document.getElementById("name").innerHTML ='Planeta: ' + response.results[5]['name'];
+                    document.getElementById("population").innerHTML ='População: ' +  response.results[5]['population'];
+                    document.getElementById("climate").innerHTML = 'Clima: ' + response.results[5]['climate'];
+                    document.getElementById("terrain").innerHTML = 'Terreno: ' + response.results[5]['terrain'];
+                    
+                }
+
+                if( searchz == response.results[6]['name']) {
+                    document.getElementById("name").innerHTML ='Planeta: ' + response.results[6]['name'];
+                    document.getElementById("population").innerHTML ='População: ' +  response.results[6]['population'];
+                    document.getElementById("climate").innerHTML = 'Clima: ' + response.results[6]['climate'];
+                    document.getElementById("terrain").innerHTML = 'Terreno: ' + response.results[6]['terrain'];
+                   
+                }
+
+                if( searchz == response.results[7]['name']) {
+                    document.getElementById("name").innerHTML ='Planeta: ' + response.results[7]['name'];
+                    document.getElementById("population").innerHTML ='População: ' +  response.results[7]['population'];
+                    document.getElementById("climate").innerHTML = 'Clima: ' + response.results[7]['climate'];
+                    document.getElementById("terrain").innerHTML = 'Terreno: ' + response.results[7]['terrain'];
+                   
+                }
+               
+                if( searchz == response.results[8]['name']) {
+                    document.getElementById("name").innerHTML ='Planeta: ' + response.results[8]['name'];
+                    document.getElementById("population").innerHTML ='População: ' +  response.results[8]['population'];
+                    document.getElementById("climate").innerHTML = 'Clima: ' + response.results[8]['climate'];
+                    document.getElementById("terrain").innerHTML = 'Terreno: ' + response.results[8]['terrain'];
+                    
+                }
+
+                if( searchz == response.results[9]['name']) {
+                    document.getElementById("name").innerHTML ='Planeta: ' + response.results[9]['name'];
+                    document.getElementById("population").innerHTML ='População: ' +  response.results[9]['population'];
+                    document.getElementById("climate").innerHTML = 'Clima: ' + response.results[9]['climate'];
+                    document.getElementById("terrain").innerHTML = 'Terreno: ' + response.results[9]['terrain'];
+                   
+                }
+            })
+                // Tratando erros;
+            .catch(function(error){
+                console.log(error);
+            })
+
+        }
+     
+     
+     
+        //       // REQUISIÇÃO COM AXIOS //  
+        // axios.get('https://swapi.co/api/planets/')   
+
+        // .then(function (response) {             
+        //     console.log(response);
+        // })
+        // .catch(function (error) {
+        //     console.log(error);
+        // });                  
     
-        let titles = filmsData.map(filmData => filmData.title)
 
-        name.innerText = 'Planeta: ' + planetData.name;
-        population.innerText = 'População total: ' + planetData.population;
-        climate.innerText = 'Clima: ' + planetData.climate;
-        terrain.innerText = 'Terreno: ' + planetData.terrain;    
-        films.innerText = 'Aparição em filmes: ' + titles.join(' , ');
-    }
-
-        // Adicionando função getPlanet ao click do botão;
-        button.addEventListener('click', getPlanet);
+                        
 
 
-////////////////////////////////////////////////
+
+
+
+
+
+
+
+
