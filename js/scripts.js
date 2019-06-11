@@ -126,13 +126,4 @@
             })
 
         }
-
-        //       // REQUISIÇÃO COM AXIOS //  
-        // axios.get('https://swapi.co/api/planets/')   
-
-        // .then(function (response) {             
-        //     console.log(response);
-        // })
-        // .catch(function (error) {
-        //     console.log(error);
-        // });
+     
