@@ -8,7 +8,7 @@
     var MyPromise = function () {
         return new Promise(function (resolve,reject){
 
-            // Rquesição;
+            // Requisição;
             xhr = new XMLHttpRequest();
 
             // Consumindo API;
