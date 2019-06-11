@@ -1,7 +1,7 @@
 
 
 
-    //     // REQUEST COM AJAX - JS PURO.
+ // REQUEST COM AJAX - JS PURO.
     // PROMISE - PARAMETROS;
 
     function Pesqz () {
@@ -28,25 +28,22 @@
     // Chamando Promise;
         MyPromise()
             // Resposta da api;
-            .then(function (response) {
-                console.log(response.results);
-                // console.log(response.results[0]['name']);
-                // console.log(response.results.films);   
+            .then(function (response) {                  
 
                 searchz = document.getElementById("procurar").value;   
-                
+                    //Validação 1;
                 if( searchz == '') {
                    alert('Digite o nome do planeta');
                 }
-
+                    //Validação 2;
                 if( searchz == null ) {
                     alert('Digite um planeta válido.')
                 }
-
+                    //Validação 3;
                 if( searchz.length <= 1) {
                     alert('Digite o nome completo do Planeta!');
                  }
-                
+
                 if( searchz == response.results[0]['name']) {
                     document.getElementById("name").innerHTML ='Planeta: ' + response.results[0]['name'];
                     document.getElementById("population").innerHTML ='População: ' +  response.results[0]['population'];
@@ -129,9 +126,7 @@
             })
 
         }
-     
-     
-     
+
         //       // REQUISIÇÃO COM AXIOS //  
         // axios.get('https://swapi.co/api/planets/')   
 
@@ -140,17 +135,4 @@
         // })
         // .catch(function (error) {
         //     console.log(error);
-        // });                  
-    
-
-                        
-
-
-
-
-
-
-
-
-
-
+        // });
